@@ -1,0 +1,99 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+  height: 100%;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  height: 100%;
+}
+
+.react-scroll-to-bottom--css-uzqrz-79elbk {
+  position: relative;
+}
+
+.react-scroll-to-bottom--css-ikyem-1n7m0yu {
+  height: 100%;
+  overflow-y: auto;
+  width: 100%;
+}
+
+textarea:focus {
+  outline: none;
+  box-shadow: none;
+}
+
+.markdown *:not(div.codeStyle) {
+  background-color: transparent !important;
+  color: #fff;
+  list-style: unset;
+}
+
+div.codeStyle {
+  margin: 0px !important;
+}
+
+.markdown .markdown-body hr {
+  background-color: white !important;
+}
+
+.markdown-body pre {
+  padding: 0px !important;
+}
+
+.markdown ol {
+  list-style: decimal !important;
+}
+.markdown ul {
+  list-style: disc !important;
+}
+
+.markdown a {
+  text-decoration: underline !important;
+}
+
+.whitespace-pre-wrap {
+  white-space: unset !important;
+}
+
+@layer utilities {
+  @variants responsive {
+    /* Hide scrollbar for Chrome, Safari and Opera */
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+
+    /* Hide scrollbar for IE, Edge and Firefox */
+    .no-scrollbar {
+      -ms-overflow-style: none; /* IE and Edge */
+      scrollbar-width: none; /* Firefox */
+    }
+  }
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.scroll-on-hover:hover {
+  text-overflow: clip;
+  animation: scroll-left 2s linear infinite;
+}
